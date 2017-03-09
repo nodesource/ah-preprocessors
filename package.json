@@ -1,6 +1,6 @@
 {
   "name": "ah-preprocessors",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Preprocessors of data provided by ah-collector.",
   "main": "ah-preprocessors.js",
   "scripts": {},
