@@ -1,0 +1,697 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>  | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+</head>
+<body class='documentation'>
+  <div class='max-width-4 mx-auto'>
+    <div class='clearfix md-mxn2'>
+      <div class='fixed xs-hide fix-3 overflow-auto max-height-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'></h3>
+          <div class='mb1'><code></code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#cloner'
+                  class="">
+                  Cloner
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#clonerclone'
+                  class="">
+                  cloner.clone
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#resourceprocesor'
+                  class="">
+                  ResourceProcesor
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#resourceprocessorcleanallresources'
+                  class="">
+                  resourceProcessor.cleanAllResources
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#resourceprocessorcleanupresource'
+                  class="">
+                  resourceProcessor.cleanupResource
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#scoutfunctions'
+                  class="">
+                  scoutFunctions
+                  
+                </a>
+                
+                </li>
+              
+            </ul>
+          </div>
+          <div class='mt1 h6 quiet'>
+            <a href='http://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+          </div>
+        </div>
+      </div>
+      <div class='fix-margin-3'>
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='cloner'>
+      Cloner
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Creates a Cloner instance which is just a thin wrapper
+on top of <a href="https://github.com/thlorenz/facile-clone">facile-clone</a> and clones an object preserving Buffers and
+strings according to the options supplied.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Cloner($0: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>$0</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    options applied when cloning objects
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>$0.bufferLength</span> <code class='quiet'><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?</code>
+                  
+                    (default <code>0</code>)
+                  </td>
+                  <td class='break-word'><span>determines how many elements of Buffers are
+captured. By default not Buffer data is captured.
+</span></td>
+                </tr>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>$0.stringLength</span> <code class='quiet'><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?</code>
+                  
+                    (default <code>0</code>)
+                  </td>
+                  <td class='break-word'><span>determines how much of each string is
+captured. By default no string data is captured.
+</span></td>
+                </tr>
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='clonerclone'>
+      cloner.clone
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Clones the object according to the options supplied in the constructor.</p>
+
+
+  <div class='pre p1 fill-light mt0'>cloner.clone(x: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    the object to clone
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>:
+        the cloned object
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='resourceprocesor'>
+      ResourceProcesor
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Creates an instance of ResourceProcessor.
+Never call this directly, instead extend it to create a specific processor
+for your particular resource type, i.e. <code>NetworkResourceProcessor</code>.</p>
+<p>Makes sure that each resource is only processed once.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new ResourceProcesor($0: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>$0</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    options specifying if arguments and function source are captured and how they are cloned
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>$0.cloner</span> <code class='quiet'><a href="#cloner">Cloner</a></code>
+                  </td>
+                  <td class='break-word'><span>used to clone the resource information
+</span></td>
+                </tr>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>$0.captureArguments</span> <code class='quiet'><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>?</code>
+                  
+                    (default <code>false</code>)
+                  </td>
+                  <td class='break-word'><span>if 
+<code>true</code>
+ arguments of callbacks
+are captured when they are processed.
+</span></td>
+                </tr>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>$0.captureSource</span> <code class='quiet'><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>?</code>
+                  
+                    (default <code>false</code>)
+                  </td>
+                  <td class='break-word'><span>if 
+<code>true</code>
+ the source code of callbacks
+is captured when they are processed.
+</span></td>
+                </tr>
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='resourceprocessorcleanallresources'>
+      resourceProcessor.cleanAllResources
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Cleans up all captured resources which means that they are processed,
+meaningful data extracted and the reference to the actual resource removed
+so it can be GCed.</p>
+
+
+  <div class='pre p1 fill-light mt0'>resourceProcessor.cleanAllResources(activities: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, collectFunctionInfo: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>?)</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>activities</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    the activities whose resources should be cleaned
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>collectFunctionInfo</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>?
+            = <code>false</code>)</code>
+	    if 
+<code>true</code>
+ it will collect info of all
+functions found on the hooks resources.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='resourceprocessorcleanupresource'>
+      resourceProcessor.cleanupResource
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Cleans the particular resource of the activity found by the uid as part of the activities.
+If the uid isn't found in the activities or the activity is <code>null</code> this function returns
+without doing anything.</p>
+
+
+  <div class='pre p1 fill-light mt0'>resourceProcessor.cleanupResource(uid: (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>), activities: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">Map</a>&#x3C;(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>), <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>>, collectFunctionInfo: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>?)</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>uid</span> <code class='quiet'>((<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>))</code>
+	    the id that identifies the activity whose resource should be cleaned
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>activities</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">Map</a>&#x3C;(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>), <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>>)</code>
+	    the activities that contain the activity whose resource should be
+cleaned
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>collectFunctionInfo</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>?
+            = <code>false</code>)</code>
+	    if 
+<code>true</code>
+ it will collect info of all
+functions found on the hooks resources.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='scoutfunctions'>
+      scoutFunctions
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Scouts functions using <a href="https://github.com/nodesource/function-scout">function-scout</a>
+and then adapts the data according to the supplied options.
+In the process clones function arguments as well and appends them to the returned
+function info</p>
+<p>This function is used by the <code>ResourceProcessor</code> and most likely you won't have to call
+it directly.</p>
+<p>Sample return value:</p>
+<pre class='hljs'> [ { <span class="hljs-attr">path</span>: [ <span class="hljs-string">'owner'</span>, <span class="hljs-string">'_events'</span>, <span class="hljs-string">'connection'</span> ],
+     <span class="hljs-attr">key</span>: <span class="hljs-string">'connection'</span>,
+     <span class="hljs-attr">level</span>: <span class="hljs-number">2</span>,
+     <span class="hljs-attr">info</span>:
+      FunctionOrigin {
+        <span class="hljs-attr">file</span>: <span class="hljs-string">'/Volumes/d/dev/js/async-hooks/ah-net/test/one-tcp-server.listen+close.js'</span>,
+        <span class="hljs-attr">line</span>: <span class="hljs-number">25</span>,
+        <span class="hljs-attr">column</span>: <span class="hljs-number">21</span>,
+        <span class="hljs-attr">inferredName</span>: <span class="hljs-string">''</span>,
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'onconnection'</span> },
+     <span class="hljs-attr">id</span>: <span class="hljs-number">2</span>,
+     <span class="hljs-attr">arguments</span>: <span class="hljs-literal">null</span> }]</pre>
+
+
+  <div class='pre p1 fill-light mt0'>scoutFunctions(ctx: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, uid: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>, $0: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>ctx</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    the context that should be scouted for functions
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>uid</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    the id which is appended to each function info
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>$0</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    options specifying if arguments and function source are captured and how they are cloned
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>$0.captureArguments</span> <code class='quiet'><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>?</code>
+                  
+                    (default <code>false</code>)
+                  </td>
+                  <td class='break-word'><span>if 
+<code>true</code>
+ arguments of callbacks
+are captured when they are processed.
+</span></td>
+                </tr>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>$0.captureSource</span> <code class='quiet'><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>?</code>
+                  
+                    (default <code>false</code>)
+                  </td>
+                  <td class='break-word'><span>if 
+<code>true</code>
+ the source code of callbacks
+is captured when they are processed.
+</span></td>
+                </tr>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>$0.cloner</span> <code class='quiet'><a href="#cloner">Cloner</a></code>
+                  </td>
+                  <td class='break-word'><span>used to clone the function arguments
+</span></td>
+                </tr>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>$0.name</span> <code class='quiet'><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?</code>
+                  
+                    (default <code>null</code>)
+                  </td>
+                  <td class='break-word'><span>if supplied it will be prepended to all function paths
+</span></td>
+                </tr>
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>></code>:
+        array of function information elements, one for each function encountered
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+      </div>
+    </div>
+  </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>
