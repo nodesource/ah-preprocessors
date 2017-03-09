@@ -1,0 +1,29 @@
+{
+  "name": "ah-preprocessors",
+  "version": "0.0.0",
+  "description": "Preprocessors of data provided by ah-collector.",
+  "main": "ah-preprocessors.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nodesource/ah-preprocessors.git"
+  },
+  "homepage": "https://github.com/nodesource/ah-preprocessors",
+  "dependencies": {
+    "facile-clone": "~1.2.0",
+    "function-scout": "~0.3.0"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Thorsten Lorenz",
+    "email": "thlorenz@gmx.de",
+    "url": "http://nodesource.com"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/nodesource/ah-preprocessors/blob/master/LICENSE"
+  },
+  "engine": {
+    "node": ">=0.10"
+  }
+}
